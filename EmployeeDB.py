@@ -51,8 +51,12 @@ class DataBaseOperations:
 		with conn:
 			try:
 				c.execute("INSERT INTO ABCemployees VALUES (:id_num, :title, :first, :last, :email, :salary)",
-						  {'id_num': emp.id_num, 'title': emp.title, 'first': emp.first, 'last': emp.last,
-						   'email': emp.email, 'salary': emp.salary})
+						  {'id_num': emp.id_num, 
+							'title':   emp.title, 
+							'first':   emp.first, 
+							'last':    emp.last,
+						  'email':   emp.email, 
+							'salary':  emp.salary})
 				print('\nNew employee created successfully\n')
 			except Exception:
 				print("\n***You must create an employee table first***")
